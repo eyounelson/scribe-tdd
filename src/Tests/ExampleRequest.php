@@ -61,7 +61,7 @@ class ExampleRequest
         return [
             'status' => $statusCode = $this->response->getStatusCode(),
             'headers' => $this->response->headers->all(),
-            'description' => $statusCode.', '.$this->exampleCreator->description,
+            'description' => $this->exampleCreator->description,
             'content' => (string) $this->response->getContent(),
         ];
     }
