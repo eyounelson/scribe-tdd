@@ -12,9 +12,9 @@ class QueryParamParser
         if (is_scalar($value)) {
             return [
                 'type' => gettype($value),
-                'description' => '',
+                // 'description' => '',
                 'example' => $value,
-                'required' => false,
+                // 'required' => false,
             ];
         }
 
@@ -22,9 +22,9 @@ class QueryParamParser
         if (is_array($value) && !Arr::isAssoc($value)) {
             return [
                 'type' => gettype(head($value)) . '[]',
-                'description' => '',
+                // 'description' => '',
                 'example' => $value,
-                'required' => false,
+                // 'required' => false,
             ];
         }
     }
